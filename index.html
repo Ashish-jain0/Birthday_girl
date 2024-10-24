@@ -30,6 +30,7 @@
             max-width: 600px;
             text-align: left;
             overflow-x: auto;
+            display: inline-block;
         }
 
         #copyright {
@@ -41,6 +42,12 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+        }
+
+        #loveHeart {
+            background: url("smile.gif") no-repeat center;
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
         }
 
         @media (max-width: 600px) {
@@ -100,9 +107,7 @@
         </div>
 
         <div class="heart-container">
-            <div id="loveHeart">
-                <canvas id="garden" style="display:none"></canvas>
-            </div>
+            <div id="loveHeart"></div>
         </div>
 
         <hr />
@@ -135,6 +140,39 @@
                 adjustCodePosition();
                 $("#code").typewriter();
             }
+
+            // Auto typing effect
+            var text = `Girl u = new Girl("Merlyn");
+            // October 25th, when the bell rang, your age increased 
+            Date currentTime = new Date(); 
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String dateString = formatter.format(currentTime);
+            if( dateString.equals("2024-10-25 00:00:00") ){
+                u.age ++;
+            }
+            // My best wishes will be with you simultaneously.
+            new Thread (){
+                @Override 
+                // Forever and ever. I wish
+                while(true){
+                    // luckiness,
+                    u.fortune ++;
+                    // happiness,
+                    u.happiness ++;
+                    // and everything you wish can be achieved.
+                }.start()
+            // The last thing I wanna say:
+            System.out.println("Happy Birthday!");`;
+
+            var index = 0;
+            function typeWriter() {
+                if (index < text.length) {
+                    document.getElementById('code').innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 50); // Adjust speed here
+                }
+            }
+            typeWriter();
         });
     </script>
 </body>
