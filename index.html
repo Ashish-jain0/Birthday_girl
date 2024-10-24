@@ -9,47 +9,54 @@
     <style type="text/css">
         * {
             background: #fff;
+            margin: 0; /* Reset default margins */
+            padding: 0; /* Reset default padding */
+        }
+
+        body {
+            padding: 10px; /* General padding for body */
         }
 
         #loveHeart {
             background: transparent;
             background: url("smile.gif") no-repeat center;
         }
+
         #copyright {
             font-family: "Montserrat", sans-serif;
         }
+
         #copyright a {
             text-decoration: none;
         }
+
         #copyright a:hover {
             text-decoration: none;
             color: royalblue;
         }
+
         #hbd_song {
             display: none;
         }
+
         #disc {
             color: lightgray;
             font-weight: bold;
             font-size: 13px;
         }
 
-        /* Adjustments for mobile view */
         #code {
-            margin: 20px 0; /* Adds spacing above and below the code section */
-            padding: 10px; /* Optional: Adds padding for better appearance */
+            margin-top: 20px; /* Space above code */
+            padding: 10px; /* Optional padding */
         }
 
         @media (max-width: 768px) {
-            body {
-                padding-top: 20px; /* Adds padding to the top of the page */
-            }
             #code {
-                margin-top: 30px; /* Increased top margin on mobile */
-                font-size: 14px; /* Adjust font size for readability */
+                margin-top: 10px; /* Adjusted top margin on mobile */
+                font-size: 14px; /* Font size for better readability */
             }
             .disc {
-                font-size: 12px; /* Smaller font size for disclaimer on mobile */
+                font-size: 12px; /* Smaller font size for disclaimer */
             }
         }
     </style>
@@ -63,7 +70,7 @@
 </head>
 
 <body>
-    <div style="padding-top: 10px;" class="section">
+    <div class="section">
         <div class="columns">
             <div class="column is-12">
                 <center>
@@ -71,13 +78,13 @@
                         <source src="song.mp3" type="audio/mpeg">
                     </audio>
                     <br />
-                    <span class="disc">Disclaimer: Hey Girl, This time stuck with Autoplay thing, Just Play it Manually, Scroll your screen and Enjoy! For Better view Use Laptop </span>
+                    <span class="disc">Disclaimer: Hey Girl, This time stuck with Autoplay thing, Just Play it Manually, Scroll your screen and Enjoy! For Better view Use Laptop</span>
                 </center>
             </div>
         </div>
-        <br /><br />
+
         <div class="columns">
-            <div id="code" class="column is-6 is-offset-2">
+            <div id="code" class="column is-6 is-offset-3">
                 <span class="comments">/**</span><br />
                 <span class="space"/><span class="comments">* Today, the 25th day of October, is your birthday.</span><br />
                 <span class="space"/><span class="comments">* So I created a webpage to celebrate this special day.</span><br />
@@ -108,12 +115,12 @@
                 <canvas id="garden" style="display:none"></canvas>
             </div>
         </div>
-        <br />
+
         <hr />
         <div class="columns">
             <div class="column is-12" id="copyright">
                 <center>
-                    <p>Made with love by Ashish Jain </p>
+                    <p>Made with love by Ashish Jain</p>
                 </center>
             </div>
         </div>
