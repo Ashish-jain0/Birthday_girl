@@ -33,6 +33,21 @@
             font-weight: bold;
             font-size: 13px;
         }
+
+        /* Adjustments for mobile view */
+        #code {
+            margin: 20px 0; /* Adds spacing above and below the code section */
+        }
+
+        @media (max-width: 768px) {
+            #code {
+                margin-top: 10px; /* Reduces top margin on mobile */
+                font-size: 14px; /* Optional: Adjust font size for readability */
+            }
+            .disc {
+                font-size: 12px; /* Smaller font size for disclaimer on mobile */
+            }
+        }
     </style>
 
     <link href="css/style1.css" type="text/css" rel="stylesheet" />
