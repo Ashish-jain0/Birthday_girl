@@ -22,9 +22,9 @@
             margin-bottom: 20px;
         }
         #disc {
-            color: rgba(255, 255, 255, 0.8);
+            color: #ffccff; /* Light purple for better visibility */
             font-weight: bold;
-            font-size: 1em;
+            font-size: 1.2em; /* Increased size */
             margin-top: 15px;
         }
         #code {
@@ -32,6 +32,13 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            white-space: pre-wrap; /* Allow line wrapping */
+            word-wrap: break-word; /* Break long words */
+            max-width: 100%; /* Prevent horizontal overflow */
+            overflow: auto; /* Scroll if necessary */
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace; /* Monospace for code */
         }
         #copyright {
             margin-top: 20px;
