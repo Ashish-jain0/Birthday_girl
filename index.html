@@ -6,26 +6,35 @@
     <title>Happy Birthday Merlyn</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
     <link href="css/style1.css" rel="stylesheet">
 
     <style>
         body {
-            background-color: #fff;
+            background: linear-gradient(to bottom right, #ffcc00, #ff6699);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
         }
-        #copyright {
-            font-family: "Montserrat", sans-serif;
-        }
-        #copyright a {
-            text-decoration: none;
-        }
-        #copyright a:hover {
-            color: royalblue;
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 20px;
         }
         #disc {
-            color: lightgray;
+            color: rgba(255, 255, 255, 0.8);
             font-weight: bold;
-            font-size: 13px;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+        #code {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        #copyright {
+            margin-top: 20px;
         }
     </style>
 
@@ -35,21 +44,21 @@
 </head>
 <body>
     <div class="section" style="padding-top: 10px;">
+        <h1>Happy Birthday Merlyn!</h1>
+        
         <div class="columns">
             <div class="column is-12">
-                <center>
-                    <audio controls loop autoplay muted>
-                        <source src="song.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <br />
-                    <span id="disc">Disclaimer: Hey Girl, This time stuck with Autoplay thing, Just Play it Manually, Scroll your screen and Enjoy! For Better view Use Laptop</span>
-                </center>
+                <audio controls loop autoplay muted>
+                    <source src="song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <br />
+                <span id="disc">Disclaimer: Hey Girl, this time stuck with the autoplay thing, just play it manually, scroll your screen, and enjoy! For better view, use a laptop.</span>
             </div>
         </div>
 
         <div class="columns">
-            <div class="column is-6 is-offset-2" id="code">
+            <div class="column is-6 is-offset-3" id="code">
                 <pre>
 <span class="comments">/**</span>
 <span class="space"/><span class="comments">* Today, the 25th day of October, is your birthday.</span>
@@ -81,26 +90,18 @@ if(dateString.equals(<span class="string">"2024-10-25 00:00:00"</span>)){
 System.out.println(<span class="string">"Happy Birthday!"</span>);
                 </pre>
             </div>
-            <div id="loveHeart" class="column is-4">
-                <canvas id="garden" style="display:none;"></canvas>
-            </div>
         </div>
 
         <hr />
         <div class="columns">
             <div class="column is-12" id="copyright">
-                <center>
-                    <p>Made with love by Ashish Jain</p>
-                </center>
+                <p>Made with love by Ashish Jain</p>
             </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function() {
-            var offsetX = $("#loveHeart").width() / 2;
-            var offsetY = $("#loveHeart").height() / 2 - 55;
-
             if (!document.createElement("canvas").getContext) {
                 var msg = document.createElement("div");
                 msg.id = "errorMsg";
