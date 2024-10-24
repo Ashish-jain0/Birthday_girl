@@ -37,12 +37,16 @@
         /* Adjustments for mobile view */
         #code {
             margin: 20px 0; /* Adds spacing above and below the code section */
+            padding: 10px; /* Optional: Adds padding for better appearance */
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 20px; /* Adds padding to the top of the page */
+            }
             #code {
-                margin-top: 10px; /* Reduces top margin on mobile */
-                font-size: 14px; /* Optional: Adjust font size for readability */
+                margin-top: 30px; /* Increased top margin on mobile */
+                font-size: 14px; /* Adjust font size for readability */
             }
             .disc {
                 font-size: 12px; /* Smaller font size for disclaimer on mobile */
